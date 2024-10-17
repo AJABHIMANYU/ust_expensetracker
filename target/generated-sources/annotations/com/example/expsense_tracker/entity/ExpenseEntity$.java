@@ -27,6 +27,16 @@ public final class ExpenseEntity$ {
         false
     );
     /**
+     * This Field corresponds to the {@link ExpenseEntity} field
+     * "paymentMethod".
+     */
+    public static final StringField<ExpenseEntity> paymentMethod = StringField.create(
+        ExpenseEntity.class,
+        "paymentMethod",
+        ExpenseEntity::getPaymentMethod,
+        false
+    );
+    /**
      * This Field corresponds to the {@link ExpenseEntity} field "id".
      */
     public static final LongField<ExpenseEntity> id = LongField.create(
@@ -42,16 +52,6 @@ public final class ExpenseEntity$ {
         ExpenseEntity.class,
         "description",
         ExpenseEntity::getDescription,
-        false
-    );
-    /**
-     * This Field corresponds to the {@link ExpenseEntity} field
-     * "paymentMethod".
-     */
-    public static final StringField<ExpenseEntity> paymentMethod = StringField.create(
-        ExpenseEntity.class,
-        "paymentMethod",
-        ExpenseEntity::getPaymentMethod,
         false
     );
     /**
