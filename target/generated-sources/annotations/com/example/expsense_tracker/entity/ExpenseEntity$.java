@@ -18,15 +18,6 @@ import java.time.LocalDate;
 public final class ExpenseEntity$ {
     
     /**
-     * This Field corresponds to the {@link ExpenseEntity} field "amount".
-     */
-    public static final DoubleField<ExpenseEntity> amount = DoubleField.create(
-        ExpenseEntity.class,
-        "amount",
-        ExpenseEntity::getAmount,
-        false
-    );
-    /**
      * This Field corresponds to the {@link ExpenseEntity} field "id".
      */
     public static final LongField<ExpenseEntity> id = LongField.create(
@@ -36,12 +27,13 @@ public final class ExpenseEntity$ {
         false
     );
     /**
-     * This Field corresponds to the {@link ExpenseEntity} field "date".
+     * This Field corresponds to the {@link ExpenseEntity} field
+     * "paymentMethod".
      */
-    public static final ComparableField<ExpenseEntity, LocalDate> date = ComparableField.create(
+    public static final StringField<ExpenseEntity> paymentMethod = StringField.create(
         ExpenseEntity.class,
-        "date",
-        ExpenseEntity::getDate,
+        "paymentMethod",
+        ExpenseEntity::getPaymentMethod,
         false
     );
     /**
@@ -63,13 +55,21 @@ public final class ExpenseEntity$ {
         false
     );
     /**
-     * This Field corresponds to the {@link ExpenseEntity} field
-     * "paymentMethod".
+     * This Field corresponds to the {@link ExpenseEntity} field "amount".
      */
-    public static final StringField<ExpenseEntity> paymentMethod = StringField.create(
+    public static final DoubleField<ExpenseEntity> amount = DoubleField.create(
         ExpenseEntity.class,
-        "paymentMethod",
-        ExpenseEntity::getPaymentMethod,
+        "amount",
+        ExpenseEntity::getAmount,
+        false
+    );
+    /**
+     * This Field corresponds to the {@link ExpenseEntity} field "date".
+     */
+    public static final ComparableField<ExpenseEntity, LocalDate> date = ComparableField.create(
+        ExpenseEntity.class,
+        "date",
+        ExpenseEntity::getDate,
         false
     );
 }
