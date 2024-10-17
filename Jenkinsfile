@@ -22,8 +22,8 @@ pipeline {
             {bat "mvn test"}
         }
         stage('Deploy') {
-            steps { bat "docker build -t ust_expensetracker ."
-                    bat "docker run -p 8020:8020 -d  ust_expensetracker "}
+            steps { bat "docker build -t expsense-tracker "
+                    bat "docker run -p 8020:8020 -d  expsense-tracker "}
         }
         }
         }
