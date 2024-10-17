@@ -18,22 +18,12 @@ import java.time.LocalDate;
 public final class ExpenseEntity$ {
     
     /**
-     * This Field corresponds to the {@link ExpenseEntity} field "date".
+     * This Field corresponds to the {@link ExpenseEntity} field "amount".
      */
-    public static final ComparableField<ExpenseEntity, LocalDate> date = ComparableField.create(
+    public static final DoubleField<ExpenseEntity> amount = DoubleField.create(
         ExpenseEntity.class,
-        "date",
-        ExpenseEntity::getDate,
-        false
-    );
-    /**
-     * This Field corresponds to the {@link ExpenseEntity} field
-     * "paymentMethod".
-     */
-    public static final StringField<ExpenseEntity> paymentMethod = StringField.create(
-        ExpenseEntity.class,
-        "paymentMethod",
-        ExpenseEntity::getPaymentMethod,
+        "amount",
+        ExpenseEntity::getAmount,
         false
     );
     /**
@@ -46,21 +36,12 @@ public final class ExpenseEntity$ {
         false
     );
     /**
-     * This Field corresponds to the {@link ExpenseEntity} field "description".
+     * This Field corresponds to the {@link ExpenseEntity} field "date".
      */
-    public static final StringField<ExpenseEntity> description = StringField.create(
+    public static final ComparableField<ExpenseEntity, LocalDate> date = ComparableField.create(
         ExpenseEntity.class,
-        "description",
-        ExpenseEntity::getDescription,
-        false
-    );
-    /**
-     * This Field corresponds to the {@link ExpenseEntity} field "amount".
-     */
-    public static final DoubleField<ExpenseEntity> amount = DoubleField.create(
-        ExpenseEntity.class,
-        "amount",
-        ExpenseEntity::getAmount,
+        "date",
+        ExpenseEntity::getDate,
         false
     );
     /**
@@ -70,6 +51,25 @@ public final class ExpenseEntity$ {
         ExpenseEntity.class,
         "income",
         ExpenseEntity::isIncome,
+        false
+    );
+    /**
+     * This Field corresponds to the {@link ExpenseEntity} field "description".
+     */
+    public static final StringField<ExpenseEntity> description = StringField.create(
+        ExpenseEntity.class,
+        "description",
+        ExpenseEntity::getDescription,
+        false
+    );
+    /**
+     * This Field corresponds to the {@link ExpenseEntity} field
+     * "paymentMethod".
+     */
+    public static final StringField<ExpenseEntity> paymentMethod = StringField.create(
+        ExpenseEntity.class,
+        "paymentMethod",
+        ExpenseEntity::getPaymentMethod,
         false
     );
 }
