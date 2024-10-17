@@ -23,7 +23,7 @@ pipeline {
         }
         stage('Deploy') {
             steps { bat "docker build -t ust_expensetracker ."
-                    bat "docker run -p 8020:8020 -d --name ex-container ust_expensetracker "}
+                    bat "docker run -p 8020:8020 -d  ust_expensetracker "}
         }
         }
         }
